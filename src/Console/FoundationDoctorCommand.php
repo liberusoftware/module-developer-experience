@@ -9,8 +9,10 @@ use Liberu\Foundation\ModuleManager\ModuleValidator;
 
 final class FoundationDoctorCommand extends Command
 {
+    #[\Override]
     protected $signature = 'foundation:doctor';
 
+    #[\Override]
     protected $description = 'Check required extensions, writable runtime paths, and the module composition';
 
     public function handle(ModuleRegistry $registry, ModuleValidator $validator, EnvironmentDoctor $environment): int
